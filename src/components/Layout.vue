@@ -14,6 +14,9 @@
           <van-cell title="路由跳转"
                     is-link
                     to="/HelloWorld" />
+          <van-cell title="任务列表"
+                    is-link
+                    to="/TaskList" />
           <div>
             <van-button type="primary"
                         center="true">默认按钮</van-button>

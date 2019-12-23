@@ -12,6 +12,7 @@
       <van-cell title="路由跳转"
                 is-link
                 to="/HelloWorld" />
+
     </van-cell-group>
     <van-button type="primary">默认按钮</van-button>
   </div>

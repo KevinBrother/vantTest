@@ -10,8 +10,8 @@
         </van-dropdown-menu>
       </van-col>
       <van-col span="10">
-        <van-field v-model="value"
-                   placeholder="按任务名查询" />
+        <van-search placeholder="按任务名查询"
+                    v-model="value" />
       </van-col>
       <van-col span="6">
         <van-button type="default"
@@ -29,6 +29,7 @@ export default Vue.extend({
   data() {
     return {
       value1: 0,
+      value: "",
       option1: [
         { text: "全部商品", value: 0 },
         { text: "新款商品", value: 1 },
@@ -44,10 +45,4 @@ export default Vue.extend({
 });
 </script>
 <style lang="less">
-.van-row {
-  //   background-color: blue;
-  //   > van-col {
-  //     height: 15px;
-  //   }
-}
 </style>

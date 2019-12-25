@@ -10,11 +10,15 @@ module.exports = {
                         overrideBrowserslist: ['Android >= 4.0', 'iOS >= 7']
                     }),
                     pxtorem({
-                        rootValue: 37.5,
+                        rootValue: 75,
                         propList: ['*'],
                     })
                 ]
             }
         }
+    },
+    devServer: {
+        // 代理
+        proxy: 'http://192.168.1.13:8080'
     }
 };

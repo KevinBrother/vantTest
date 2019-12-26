@@ -28,10 +28,23 @@ export default {
         username: this.username,
         password: this.password
       }).then(res => {
-        this.$toast('提示内容');
-        console.log(res);
+
+        console.log('这儿是正确的回调');
+        if (res.data.code === 0) {
+          localStorage.setItem('token', res.data.token)
+          // 将登录名使用vuex传递到各个页面
+          this.$store.commit('handlerToekn', res.data.token);
+          this.$toast(res.data.msg);
+
+          // 跳转到首页
+          var that = this;
+          setTimeout(function () {
+            that.$router.push({ name: 'TaskList' })
+          }, 1000)
+        }
       }).catch(function (error) {
-        console.log(error);
+        console.log(error, "这儿是错误回调");
+        this.$toast(error.msg);
       });
     }
   }
